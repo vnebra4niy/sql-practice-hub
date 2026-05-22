@@ -9,7 +9,7 @@ The goal is to demonstrate SQL proficiency ranging from basic SELECT statements 
 
 ```
 AdventureWorks/
-  └── queries.sql                # Initial queries for AdventureWorks
+  └── queries.sql                # Completed queries for AdventureWorks
 NorthWind/
   ├── Level 1/
   │   └── queries.sql            # Simple SELECT, filtering, sorting
@@ -64,14 +64,19 @@ NorthWind/
 - Customer with the highest total order value in 1996, broken down by month (multi‑level subquery).
 - Products bought by more than 20 distinct customers (`COUNT(DISTINCT CustomerID)`).
 
-### 🧩 AdventureWorks (Work in Progress)
-Work has started on the more complex `AdventureWorks` database (schemas: `Production`, `Sales`, `Person`). Planned queries include:
+### 🧩 AdventureWorks (Completed)
 
-- Products with defined color, weight, size.
-- Heaviest and lightest product containing "Road" in its name.
-- Products priced above the average.
-- Average product price per category (using `ProductSubcategory`).
-- Total sales per customer and per salesperson.
+The following queries have been implemented on the `AdventureWorks` database (schemas: `Production`, `Sales`, `Person`):
+
+1. **Products with defined attributes** – separately list products that have a defined colour, weight, and size.
+2. **Lightest and heaviest “Road” product** – find the product containing “Road” in its name with the smallest and largest weight.
+3. **Products above average price** – list products whose price (or weight, as a variant) is higher than the overall average.
+4. **Average price per product category** – using `ProductSubcategory` and `ProductCategory` to compute the average list price per category.
+5. **Total purchases per customer** – customer first/last name and sum of `SubTotal`, sorted descending.
+6. **Total sales per salesperson** – salesperson first/last name and sum of `SubTotal`, sorted descending.
+7. **Average discount per category/subcategory/salesperson** – show only rows where the average discount is greater than zero.
+
+All queries use proper `INNER JOIN`s, aggregation with `GROUP BY`, filtering with `HAVING`, and subqueries where needed.
 
 ## Technologies Used
 - **RDBMS:** Microsoft SQL Server (local instance)
@@ -94,7 +99,6 @@ Work has started on the more complex `AdventureWorks` database (schemas: `Produc
 3. Open any `queries.sql` file in SSMS and execute the desired query.
 
 ## Future Plans
-- Complete the AdventureWorks query set.
 - Add query optimisation examples (indexes, execution plans).
 - Provide explanations and alternative solutions for complex problems.
 

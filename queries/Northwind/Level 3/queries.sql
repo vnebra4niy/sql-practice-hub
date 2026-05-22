@@ -1,3 +1,4 @@
+--Level 3
 --1. Napisz polecenie zwracające nazwy produktów i firmy je dostarczające (tak aby produkty bez dostarczycieli i
 --dostarczyciele. bez produktów nie pojawiali się w wyniku).
 
